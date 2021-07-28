@@ -1,0 +1,83 @@
+$rhap_theme-color: #000 !default; // Color of all buttons and volume/progress indicators
+$rhap_background-color: #fff !default ; // Color of the player background
+$rhap_bar-color: #e4e4e4 !default; // Color of volume and progress bar
+$rhap_time-color: #333 !default; // Font color of current time and duration
+$rhap_font-family: inherit !default; // Font family of current time and duration
+@import "/node_modules/react-h5-audio-player/src/styles.scss";
+@import "../mixin.scss";
+
+.float,
+.music,
+.ontop {
+  position: fixed;
+  cursor: pointer;
+  height: 4vh;
+  width: 4vh;
+  background: linear-gradient(#53388a, #fd97fd);
+  border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+}
+.float {
+  right: 1vw;
+  bottom: 3vh;
+  .menu {
+    display: block;
+    list-style: none;
+    bottom: 12vh;
+    position: relative;
+    li {
+      display: block;
+      position: relative;
+    }
+  }
+}
+.music,
+.ontop {
+  // position: absolute;
+  // display: inline;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fa-plus,
+.menu .fa-music,
+.menu .fa-arrow-up {
+  @include button;
+  transition: 0.3s ease-in-out;
+}
+.player {
+  position: fixed;
+  bottom: 0;
+  right: 5vw;
+  background: #000;
+  width: 90vw;
+  height: 9vh;
+  // min-height: 25vh;
+  // padding: 1.25rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  z-index: 10;
+  opacity: 0%;
+  visibility: hidden;
+  display: none;
+  // background: linear-gradient(#ed6ea0, #ec8c69);
+}
+.show{
+  opacity: 80%;
+  visibility: visible;
+  display: flex;
+}
+.active {
+  background: linear-gradient(#ed6ea0, #ec8c69);
+  transition: 0.3s ease-in;
+  .fa-plus {
+    transform: rotate(135deg);
+  }
+  .music,
+  .ontop {
+    opacity: 80%;
+    visibility: visible;
+  }
+}

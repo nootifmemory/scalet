@@ -1,0 +1,22 @@
+.hero {
+    scroll-snap-align: start;
+    background-image: var(--bg);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    height: 100vh;
+
+    .img-wraper {
+      position: absolute;
+      top: unset;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 85vh;
+    }
+    .waves{
+      bottom: 0;
+    }
+  }

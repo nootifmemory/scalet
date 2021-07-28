@@ -1,0 +1,32 @@
+.content {
+  width: 71vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 64px 16px;
+  min-height: 80vh;
+  height: 80vh;
+  background-color: #ebebeb;
+  .title {
+    text-transform: capitalize;
+    margin-left: 4vw;
+    padding-top: 3vh;
+    font-size: 32px;
+    // cursor:not-allowed;
+    &::before {
+      content: "# ";
+    }
+  }
+  .body-content {
+    .body {
+      padding: 2vh 1vw 1vh 1vw;
+      margin: 1vw;
+      // display: flex;
+      text-indent: 2vw;
+    }
+  }
+  .pa-content{
+    // position: relative;
+    display: block;
+    bottom: 0;
+    height: 100%;
+  }
+}

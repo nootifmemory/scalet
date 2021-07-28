@@ -1,0 +1,23 @@
+@media screen and (min-width: 900px) {
+  .pa-content {
+    display: flex;
+    width: 71vw;
+    justify-content: center;
+    .pagination {
+      display: flex;
+      border-radius: 8px;
+      background: var(--bg-to-right);
+      width: 20vw;
+      justify-content: space-around;
+      margin-top: 0.5rem;
+      bottom: 0;
+    }
+
+    .pagination__item {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: 1vh;
+    }
+  }
+}
