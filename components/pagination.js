@@ -7,7 +7,7 @@ export default function Pagination() {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
   return (
-    <div className="pa-content">
+    <aside className="pa-content">
     <div className="pagination">
       <div className="pagination__item">
         <i className="fas fa-arrow-left" onClick={scrollBottom}></i>
@@ -19,7 +19,7 @@ export default function Pagination() {
         <i className="fas fa-arrow-right" onClick={scrollBottom}></i>
       </div>
     </div>
-    </div>
+    </aside>
   );
 }
 

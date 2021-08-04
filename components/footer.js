@@ -5,19 +5,17 @@ import love from '../public/love.png'
 export default function Footer() {
   return (
     <footer>
-      <container>
         <div className="inner">
-          <span>
+          <p className="line1">
               CopyRight By @Wharang - 2021
-            </span>
-          <p>
+            </p>
+          <p className="line2">
             Nextjs Wharang Theme - By Wharang
           </p>
           <div className="img-warper">
           <Image src={love} alt="Goodbye" layout="fixed" height={250} width= {200}/>
           </div>
         </div>
-      </container>
     </footer>
   );
 }

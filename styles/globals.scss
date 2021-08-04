@@ -8,74 +8,39 @@
 @import "./components/hero.scss";
 @import "./components/content.scss";
 @import "./components/wave.scss";
-@import "./components/pagination.scss";
+@import "./components/post-pagination.scss";
 @import "./components/switchbutton.scss";
 
-html[theme="light"] {
-  --wave-1: rgba(240, 240, 240, 0.7);
-  --wave-2: rgba(240, 240, 240, 0.5);
-  --wave-3: rgba(240, 240, 240, 0.3);
-  --wave-4: rgba(240, 240, 240, 1);
+html[data-theme="light"] {
+  --wave-1: rgba(200, 200, 200, 0.7);
+  --wave-2: rgba(200, 200, 200, 0.5);
+  --wave-3: rgba(200, 200, 200, 0.3);
+  --wave-4: rgba(200, 200, 200, 1);
+  --text-color-normal: #0a244d;
+  --text-color-light: #8cabd9;
+  --bg-main: #c8c8c8;
+  --bg-post: rgb(240, 240, 240);
+}
+html[data-theme="dark"] {
+  --wave-1: rgba(85, 85, 85, 0.7);
+  --wave-2: rgba(85, 85, 85, 0.5);
+  --wave-3: rgba(85, 85, 85, 0.3);
+  --wave-4: rgba(85, 85, 85, 1);
+  --text-color-normal: #d6d6d6;
+  --text-color-light: #f7f7f7;
+  --bg-main: #555555;
+  --bg-post: #333333;
+}
+html {
+  --bg-to-right: linear-gradient(to right, #ed6ea0, #ec8c69);
+  --bg: linear-gradient(#ed6ea0, #ec8c69);
+  --hover: linear-gradient(#53388a, #fd97fd);
+  --primary: #ed6ea0;
+  --second-primary: #ec8c69;
   --wave-1-bottom: rgba(237, 110, 160, 0.7);
   --wave-2-bottom: rgba(237, 110, 160, 0.5);
   --wave-3-bottom: rgba(237, 110, 160, 0.3);
   --wave-4-bottom: rgba(237, 110, 160, 1);
-  --text-color-normal: #0a244d;
-  --text-color-light: #8cabd9;
-  --bg: linear-gradient(#ed6ea0, #ec8c69);
-  --bg-to-right: linear-gradient(to right, #ed6ea0, #ec8c69);
-  --hover: linear-gradient(#53388a, #fd97fd);
-  --primary:#ed6ea0;
-  --second-primary:#ec8c69;
-  --bg-main:linear-gradient(rgb(240, 240, 240), rgb(200, 200, 200) );
-  --bg-post:#FFF;
-}
-html[theme="dark"] {
-  --wave-1: rgba(2, 2, 2, 0.7);
-  --wave-2: rgba(2, 2, 2, 0.5);
-  --wave-3: rgba(2, 2, 2, 0.3);
-  --wave-4: rgba(2, 2, 2, 1);
-  --text-color: #000;
-  --background: grey;
-}
-html {
-  scroll-behavior: smooth;
-  --grey-0: #fff;
-  --grey-1: #fdfdfd;
-  --grey-2: #f7f7f7;
-  --grey-3: #eff2f3;
-  --grey-4: #ccc;
-  --grey-5: #999;
-  --grey-6: #666;
-  --grey-7: #333;
-  --grey-8: #222;
-  --grey-9: #000;
-  --grey-1-a0: rgba(253, 253, 253, 0);
-  --grey-9-a1: rgba(0, 0, 0, 0.1);
-  --grey-9-a5: rgba(0, 0, 0, 0.5);
-  --grey-2-a0: rgba(247, 247, 247, 0);
-  --color-pink-light: #ffe6fa;
-  --color-cyan-light: #e3fdf5;
-  --color-red: #e9546b;
-  --color-pink: #ed6ea0;
-  --color-orange: #ec8c69;
-  --color-yellow: #eab700;
-  --color-green: #0a7426;
-  --color-aqua: #3e999f;
-  --color-blue: #38a1db;
-  --color-purple: #9d5b8b;
-  --color-grey: #869194;
-  --color-red-a1: rgba(233, 84, 107, 0.1);
-  --color-red-a3: rgba(233, 84, 107, 0.3);
-  --color-pink-a3: rgba(237, 110, 160, 0.3);
-  --color-pink-light-a3: rgba(255, 230, 250, 0.3);
-  --color-pink-light-a5: rgba(255, 230, 250, 0.5);
-  --color-pink-light-a7: rgba(255, 230, 250, 0.7);
-  --body-bg-shadow: var(--grey-2);
-  --box-bg-shadow: var(--grey-9-a1);
-  --text-color: var(--grey-7);
-  --header-text-color: var(--grey-0);
-  --primary-color: var(--color-red);
 }
 
 body {
@@ -108,7 +73,7 @@ main {
 
 .size-1vw1vh {
   // display: block;
-  position:fixed;
+  position: fixed;
   height: 1vh;
   width: 1vw;
   z-index: 100;

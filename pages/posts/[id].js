@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import Post from "../../components/pages/post";
 import Sidebar from "../../components/sidebar";
+import Pagination from '../../components/pagination'
 
 export default function Posts({ res , ress }) {
   return (
@@ -9,6 +10,7 @@ export default function Posts({ res , ress }) {
       <Head>
         <title>Young Wild and Free</title>
       </Head>
+      <Pagination />
       <Sidebar data={ress} />
       <Post data={res} />
     </Layout>

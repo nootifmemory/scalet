@@ -10,13 +10,17 @@ footer {
     margin: 0 10vw;
     background: #eeeeee;
     padding: 3vh 3vw 0 3vw;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 32px 32px 0 0;
+    background: var(--bg-main);
+    text-align: center;
+    box-shadow: inset -10px -10px 20px 0px rgb(0 0 0 / 20%),
+      10px 10px 20px 0px rgb(0 0 0 / 10%);
     > p {
       font-weight: 700;
       margin: 1vh 0;
     }
-    .img-warper{
-      position:absolute;
+    .img-warper {
+      position: absolute;
       max-height: 90%;
       bottom: 0;
       right: 5vw;

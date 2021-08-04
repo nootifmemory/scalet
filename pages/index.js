@@ -2,13 +2,15 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import Page from "../components/pages/page"
 import Sidebar from "../components/sidebar";
+import { getPosts } from '../lib/posts';
 
 
-export default function Home({res}) {
+export default function Home({res, posts}) {
+  console.log(posts);
   return (
       <Layout >
         <Head>
-          <title>Young Wild and Free</title>
+          <title>Wharang || Homepage </title>
         </Head>
         <Sidebar data={res}/>
         <Page data={res} />
@@ -19,9 +21,11 @@ export default function Home({res}) {
 export async function getStaticProps() {
   var data =await fetch("https://jsonplaceholder.typicode.com/posts")
   var res = await data.json()
+  // const posts = await getPosts()
   return {
     props : {
-    res
+    res,
+    // posts
     }
 }
 }

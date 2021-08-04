@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Float from "./float";
 import WaveBottom from "./wavebottom";
 
+
 export default function Layout({ children }) {
   return (
     <>
