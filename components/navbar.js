@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {useState , useEffect} from 'react'
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [activeTheme, setActiveTheme] = useState("light");
@@ -12,8 +12,10 @@ export default function Navbar() {
     <header>
       <container>
         <nav>
-        <Link href="/" passHref={true}><h2>Wharang</h2></Link>
-          
+          <Link href="/" passHref={true}>
+            <h2>Wharang</h2>
+          </Link>
+
           <ul>
             <li>
               <Link href="/#work">Work</Link>
@@ -22,10 +24,14 @@ export default function Navbar() {
               <Link href="/#about">About</Link>
             </li>
             <li>
-              <label className="label" >
-                <input type="checkbox" className="label__input" onClick={() => setActiveTheme(inactiveTheme)} />
-                <div className="label__circle"></div>
-              </label>
+              <div>
+                <i
+                  className={
+                    inactiveTheme === "light" ? "fas fa-sun" : "fas fa-moon"
+                  }
+                  onClick={() => setActiveTheme(inactiveTheme)}
+                ></i>
+              </div>
             </li>
           </ul>
         </nav>
