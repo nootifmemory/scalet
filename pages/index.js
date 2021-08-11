@@ -6,7 +6,7 @@ import { getPosts } from "../lib/posts";
 import Footer from "../components/footer/footer";
 
 export default function Home({ res, posts }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <Layout>
@@ -21,8 +21,10 @@ export default function Home({ res, posts }) {
   );
 }
 
-export async function getStaticProps() {
-  var data = await fetch("https://jsonplaceholder.typicode.com/posts");
+export async function getServerSideProps ({req}) {
+  const protocol = req.headers['x-forwarded-proto'] || 'http'
+  const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
+  var data = await fetch(baseUrl+"/api/hello");
   var res = await data.json();
   // const posts = await getPosts()
   return {
