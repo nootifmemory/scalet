@@ -22,7 +22,7 @@ export default function Posts({ res, ress }) {
 }
 
 export async function getStaticProps({ params }) {
-  var data = await fetch("http://localhost:3000/api/hello");
+  var data = await fetch("https://jsonplaceholder.typicode.com/posts");
   var ress = await data.json();
   const res = ress.slice(0, 10)[params.id - 1];
   return {
@@ -34,7 +34,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  var data = await fetch("http://localhost:3000/api/hello");
+  var data = await fetch("https://jsonplaceholder.typicode.com/posts");
   var res = await data.json();
   const path = await res.map((post) => ({
     params: { id: post.id.toString() },
