@@ -5,14 +5,6 @@ export default function Post({ data }) {
         <h2 className="title">{data.title}</h2>
         <div className="body-content">
           <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
-          <p className="body">{data.body}</p>
         </div>
       </div>
     </>

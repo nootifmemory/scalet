@@ -12,7 +12,6 @@ export default function Hero() {
             src={hero}
             alt="Hero"
             layout="fill"
-            min-height="85vh"
             objectFit="contain"
             objectPosition="bottom"
           />

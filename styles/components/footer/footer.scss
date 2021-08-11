@@ -1,15 +1,16 @@
+@import "./navigator.scss";
+
 footer {
   position: relative;
   align-items: center;
   min-height: 36vh;
   background: var(--bg);
+  padding-top: 3vh;
   .inner {
-    top: 3vh;
     position: relative;
     min-height: 30vh;
-    margin: 0 10vw;
-    background: #eeeeee;
-    padding: 3vh 3vw 0 3vw;
+    margin: 0 5vw;
+    padding: 2vh 3vw;
     border-radius: 32px 32px 0 0;
     background: var(--bg-main);
     text-align: center;
@@ -17,19 +18,27 @@ footer {
       10px 10px 20px 0px rgb(0 0 0 / 10%);
     > p {
       font-weight: 700;
-      margin: 1vh 0;
+      margin: 0;
+      line-height: 3vh;
     }
-    .img-warper {
-      position: absolute;
-      max-height: 90%;
-      bottom: 0;
-      right: 5vw;
-      opacity: 80%;
+    @media screen and (min-width: 900px) {
+      .footer-img-warper {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 1vw;
+      }
     }
+    @media screen and (max-width: 900px) {
+      .footer-img-warper {
+      display: none;
+      }
+
   }
   .status {
     width: 100%;
     text-align: center;
     margin-top: 2rem;
   }
+}
 }

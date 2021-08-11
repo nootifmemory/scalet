@@ -16,6 +16,7 @@ header {
       display: flex;
       list-style: none;
       margin: 0;
+      align-items: center;
     }
     a {
       color: var(--text-color-normal);
@@ -45,5 +46,18 @@ header {
         "Segoe UI Emoji", "Segoe UI Symbol";
     }
   }
+}
+
+.btn-placeholder{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3vh;
+  padding: 0.5vw;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--bg-post);
+  transition: background 0.5s ease-in-out;
 }
 

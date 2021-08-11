@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <container>
+      <div className="container">
         <nav>
           <Link href="/" passHref={true}>
             <h2>Wharang</h2>
@@ -24,18 +24,18 @@ export default function Navbar() {
               <Link href="/#about">About</Link>
             </li>
             <li>
-              <div>
+              <div type="button" className="btn-placeholder" onClick={() => setActiveTheme(inactiveTheme)}>
                 <i
                   className={
-                    inactiveTheme === "light" ? "fas fa-sun" : "fas fa-moon"
+                    inactiveTheme === "light" ? "btn-item fas fa-sun" : "btn-item fas fa-moon"
                   }
-                  onClick={() => setActiveTheme(inactiveTheme)}
+                  
                 ></i>
               </div>
             </li>
           </ul>
         </nav>
-      </container>
+      </div>
     </header>
   );
 }

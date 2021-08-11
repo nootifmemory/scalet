@@ -1,4 +1,5 @@
 import '../styles/globals.scss'
+import { motion } from 'framer-motion'
 
 // import 'tailwindcss/tailwind.css'
 

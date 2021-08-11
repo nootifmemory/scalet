@@ -1,5 +1,5 @@
-@media screen and (min-width: 900px) {
-  .pa-content {
+.pa-content {
+  @media screen and (min-width: 900px) {
     position: sticky;
     float: left;
     margin-left: 1vw;
@@ -18,5 +18,8 @@
       display: flex;
       justify-content: center;
     }
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 }

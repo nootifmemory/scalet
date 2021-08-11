@@ -2,19 +2,12 @@
   opacity: 100%;
   @media screen and (min-width: 900px) {
     visibility: visible;
-    // background: linear-gradient(#53388a, #fd97fd);
-    background: var(--bg);
     float: right;
     position: sticky;
     width: 21vw;
     margin-right: 1vw;
-    top: 5rem;
+    top: 10vh;
     transition: all 0.2s ease-in-out 0s;
-    border-radius: 0 64px;
-    height: 82vh;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    
-
 
     .img-wraper {
       position: relative;
@@ -30,69 +23,60 @@
 
       .image {
         border-radius: 50%;
-        background: rgba(0, 0, 0, 0.2);
-        // margin-top: 2vh;
-        //   // border-radius: 50%;
-        //   // width: 10vw;
-        //   // height: 10vh;
+        background: var(--text-color-normal);
       }
     }
     .name {
-      height: 6vh;
       p {
-        top: 3vh;
         @include section-title;
         @include text;
-        cursor:auto;
-        padding: 1vh;
+        cursor: auto;
+        padding-top: 3vh;
         font-size: 2rem;
         text-align: center;
         margin: 0;
-
+        font-weight: 700;
+        text-shadow: 2px 2px #ff0000;
       }
     }
     .state {
-      display: flex;
+      display: none;
       justify-content: center;
-      margin-top: 1vh;
       overflow: hidden;
       text-align: center;
-      white-space: nowrap;
+      padding-top: 1vh;
       .item {
-        margin-top: 1vh;
         @include text;
         @include section-title;
-        padding: 0 1.5vw;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        // text-shadow: 2px 2px #ff0000;
         &:hover {
           @include hover-box;
         }
       }
+    }
+    .dropdown:hover .state{
+      display: block;
+
     }
 
     .menu {
-      @include text;
       @include section-title;
-      top: 1vh;
-      margin: 0 1vw;
-      padding: 0;
-      // top: vh;
-      letter-spacing: 2px;
+      overflow: hidden;
       text-align: center;
       p {
-        color: #fff;
-        display: block;
-        position: relative;
+        @include text;
         font-size: 1.2rem;
-        margin: 0.5vw;
         &:hover {
           @include hover-box;
         }
       }
     }
-
   }
   @media screen and (max-width: 900px) {
-    visibility: hidden;
+    // visibility: hidden;
+    display: none;
+    background: var(--bg-main);
   }
 }

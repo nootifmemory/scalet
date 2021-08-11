@@ -3,7 +3,6 @@ import Avatar from "../public/icon.png";
 import Link from "next/link";
 
 export default function Sidebar({ data }) {
-
   const count = data.length;
   return (
     <div className="sidebar">
@@ -16,22 +15,25 @@ export default function Sidebar({ data }) {
           layout="fill"
         />
       </div>
+      <div className="dropdown">
+
       <div className="name" itemProp="name">
         <p>Wharang</p>
+        </div>
+        {/* Drop Down List From Here */}
+        <div className="state">
+          <div className="state posts">
+            <Link href="/#" passHref={true}>
+              <span className="item">posts {count}</span>
+            </Link>
+          </div>
+          <div className="state tags">
+            <Link href="/#tags" passHref={true}>
+              <span className="item">tags {count}</span>
+            </Link>
+          </div>
       </div>
-      <div className="divider"></div>
-      <nav className="state">
-        <div className="state posts">
-          <Link href="/#" passHref={true}>
-            <span className="item">posts {count}</span>
-          </Link>
-        </div>
-        <div className="state tags">
-          <Link href="/tags/" passHref={true}>
-            <span className="item">tags {count}</span>
-          </Link>
-        </div>
-      </nav>
+      </div>
       <div className="menu" itemProp="menu">
         <div className="item">
           <Link href="/" passHref>
@@ -40,7 +42,7 @@ export default function Sidebar({ data }) {
           <Link href="/#work" passHref>
             <p>Work</p>
           </Link>
-          <Link href="/tags" passHref>
+          <Link href="/#tags" passHref>
             <p>Tags</p>
           </Link>
           <Link href="/#about" passHref>

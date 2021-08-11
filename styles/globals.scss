@@ -1,8 +1,8 @@
 @import "./mixin.scss";
 @import "./components/navbar.scss";
-@import "./components/footer.scss";
+@import "./components/footer/footer.scss";
 @import "./components/divider.scss";
-@import "./components/button.scss";
+@import "./components/float.scss";
 @import "./components/sidebar.scss";
 @import "./components/work.scss";
 @import "./components/hero.scss";
@@ -19,16 +19,18 @@ html[data-theme="light"] {
   --text-color-light: #8cabd9;
   --bg-main: #c8c8c8;
   --bg-post: rgb(240, 240, 240);
+  --color-bg-toggle: #1e90ff;
 }
 html[data-theme="dark"] {
   --wave-1: rgba(85, 85, 85, 0.7);
   --wave-2: rgba(85, 85, 85, 0.5);
   --wave-3: rgba(85, 85, 85, 0.3);
   --wave-4: rgba(85, 85, 85, 1);
-  --text-color-normal: #d6d6d6;
-  --text-color-light: #f7f7f7;
+  --text-color-normal: #c9c9c9;
+  --text-color-light: #ec8c69;
   --bg-main: #555555;
   --bg-post: #333333;
+  --color-bg-toggle: #a9a9a9;
 }
 html {
   --bg-to-right: linear-gradient(to right, #ed6ea0, #ec8c69);
@@ -49,15 +51,20 @@ body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  @media only screen and (min-width: 50em) {
-    font-size: 16px;
-  }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (min-width: 900px) {
     font-size: 14px;
+    // transition: transform 0.27s ease;
+    transition: all .25s linear;
+
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 12px;
+    // transition: transform 0.27s ease;
+    transition: all .25s linear;
   }
 }
 
-container {
+.container {
   box-sizing: border-box;
   min-width: 0;
   width: 100%;

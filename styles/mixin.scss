@@ -11,15 +11,9 @@
 }
 @mixin text {
   position: relative;
-  // padding: 1vh;
   text-decoration: none;
-  color: #fff;
-  // overflow:hidden;
-  // max-height: 10vh;
   letter-spacing: 2px;
   text-transform: capitalize;
-  // background: rgba(225, 225, 225, 0.09);
-  // box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 @mixin section-title {
   text-decoration: none;
@@ -41,7 +35,7 @@
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 @mixin hover-box {
-  color: #fff;
+  // color: #fff;
   background: linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
   box-shadow: 0 0 0.75rem rgba(237, 110, 160, 0.3);
 }
