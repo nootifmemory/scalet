@@ -23,7 +23,7 @@ export default function Home({ res, posts }) {
 export async function getServerSideProps ({req}) {
   const protocol = req.headers['x-forwarded-proto'] || 'http'
   const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
-  var data = await fetch("https://nootif.tk/api/hello");
+  var data = await fetch("https://wharang.fun/api/hello");
   var res = await data.json();
   // const posts = await getPosts()
   return {

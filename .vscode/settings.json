@@ -1,0 +1,23 @@
+{
+    "name": "PGSQL",
+    "server": "localhost",
+    "driver": "PostgreSQL",
+    "port": 5433,
+    "database": "test_db",
+    "username": "wharang",
+    "askForPassword": false,
+    "password": "706749Aa",
+    "connectionTimeout": 15,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "wharang",
+            "username": "wharang",
+            "password": "706749Aa",
+            "database": "wharang"
+        }
+    ]
+  }

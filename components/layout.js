@@ -1,5 +1,4 @@
 import Navbar from "./navbar";
-import Import from "./import";
 import Hero from "./hero";
 import Footer from "./footer/footer";
 import Float from "./float";
@@ -9,7 +8,6 @@ import WaveBottom from "./wavebottom";
 export default function Layout({ children }) {
   return (
     <>
-      <Import />
       <Navbar />
       <main>
         <Float />

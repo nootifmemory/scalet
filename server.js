@@ -10,7 +10,6 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   const server = express()
-  server.use(require('express-status-monitor')());
   server.all('*', (req, res) => {
     return handle(req, res)
   })
