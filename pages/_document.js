@@ -11,11 +11,11 @@ class MyDocument extends Document {
       <Html>
         <Head >
           <link
-            href="https://fonts.googleapis.com/css2?family=Pacifico"
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=auto"
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans&display=auto"
             rel="stylesheet"
           />
           <link
