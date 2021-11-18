@@ -15,7 +15,6 @@ module.exports = () => {
         ut_sec = ut_sec % 60;
         return `${ut_hour} Hour(s) ${ut_min} minute(s) and ${ut_sec} second(s)`;
     }
-    console.log(uptime());
     return {
         hostname: os.hostname(),
         type: os.type(),
